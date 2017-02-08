@@ -11,6 +11,6 @@ okokokok ok oklookingforwardokok oklookingforwardokok lookingforwardlookingforwa
 ```
 
 ```
-$ ./look okokokok ok oklookingforwardokok oklookingforwardokok lookingforwardlookingforwardlookingforward / lookingforward okokokok ok oklookingforwardok ok
+$ ./lookforward okokokok ok oklookingforwardokok oklookingforwardokok lookingforwardlookingforwardlookingforward / lookingforward okokokok ok oklookingforwardok ok
 hello there
 ```

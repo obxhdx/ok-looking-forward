@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -o nounset
+set -o errexit
+
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "$CURRENT_DIR/okmorse.sh"
+
+function decode() {
+  for i in "${!OKMORSE[@]}"; do
+    if [[ "${OKMORSE[$i]}" = "$1" ]]; then
+      echo "${i//_/ }";
+    fi
+  done
+}
+
+function lookforward() {
+  [[ "$#" -eq 0 ]] && echo -e "Usage:\n$ "${FUNCNAME[0]}" <some coded message>" && return
+
+  for char in "$@"; do
+    echo -n "$(decode $char)"
+  done
+
+  echo
+}
+
+lookforward "$@"

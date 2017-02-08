@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -o nounset
+set -o errexit
+
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "$CURRENT_DIR/okmorse.sh"
+
+function ok() {
+  [[ "$#" -eq 0 ]] && echo -e "Usage:\n$ "${FUNCNAME[0]}" <some message>" && return
+
+  msg=${@,,}
+  msg=${msg// /_}
+
+  for (( i=0; i<${#msg}; i++ )); do
+    char="${msg:$i:1}"
+    echo -n "${OKMORSE[$char]} "
+  done
+
+  echo
+}
+
+ok "$@"

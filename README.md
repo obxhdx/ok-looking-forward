@@ -14,3 +14,6 @@ okokokok ok oklookingforwardokok oklookingforwardokok lookingforwardlookingforwa
 $ ./lookforward okokokok ok oklookingforwardokok oklookingforwardokok lookingforwardlookingforwardlookingforward / lookingforward okokokok ok oklookingforwardok ok
 hello there
 ```
+
+## Requirements
+* Bash 4.*
